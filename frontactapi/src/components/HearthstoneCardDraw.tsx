@@ -42,7 +42,7 @@ export default function HearthstoneCardDraw() {
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
   const loadAllCards = useCallback(async () => {
-    setIsGalleryLoading(true);
+    setIsLoadingGallery(true);
     setError(null);
 
     try {
@@ -64,7 +64,7 @@ export default function HearthstoneCardDraw() {
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Error al cargar cartas');
     } finally {
-      setIsGalleryLoading(false);
+      setIsLoadingGallery(false);
     }
   }, [API_BASE_URL]);
 
