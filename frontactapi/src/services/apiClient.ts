@@ -1,5 +1,5 @@
 // Cliente API para realizar peticiones al backend
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export interface FetchOptions extends RequestInit {
   timeout?: number;
