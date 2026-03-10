@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   
   // Variables de entorno públicas disponibles en el cliente
   env: {
-    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://act6-api-gratuita.vercel.app/api",
+    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://act6-api-gratuita-8nz5.vercel.app/api",
   },
   
   async headers() {

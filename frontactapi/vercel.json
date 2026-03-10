@@ -5,7 +5,7 @@
   "env": {
     "NEXT_PUBLIC_API_BASE_URL": {
       "description": "URL base de la API backend de Hearthstone",
-      "value": "https://act6-api-gratuita.vercel.app/api"
+      "value": "https://act6-api-gratuita-8nz5.vercel.app/api"
     }
   }
 }

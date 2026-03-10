@@ -1,5 +1,5 @@
 // Script para verificar la conexión con la API
-const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://act6-api-gratuita.vercel.app/api';
+const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://act6-api-gratuita-8nz5.vercel.app/api';
 
 async function testAPIConnection() {
   console.log('🔍 Verificando conexión con la API...');
