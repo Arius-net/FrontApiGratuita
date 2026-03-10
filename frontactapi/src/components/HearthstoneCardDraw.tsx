@@ -47,7 +47,7 @@ export default function HearthstoneCardDraw() {
 
     try {
       // Cambio: Usamos la URL dinámica de producción
-      const response = await fetch(`${API_BASE_URL}/hearthstone-draw/all`, {
+      const response = await fetch(`${API_BASE_URL}/hearthstone/draw/all`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -80,7 +80,7 @@ export default function HearthstoneCardDraw() {
 
     try {
       // Cambio: Usamos la URL dinámica de producción
-      const response = await fetch(`${API_BASE_URL}/hearthstone-draw`, {
+      const response = await fetch(`${API_BASE_URL}/hearthstone/draw`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
