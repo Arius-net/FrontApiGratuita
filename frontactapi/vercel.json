@@ -1,0 +1,11 @@
+{
+  "name": "vercel-deployment",
+  "version": "1.0.0",
+  "description": "Configuración de despliegue para Vercel",
+  "env": {
+    "NEXT_PUBLIC_API_BASE_URL": {
+      "description": "URL base de la API backend de Hearthstone",
+      "value": "https://act6-api-gratuita.vercel.app/api"
+    }
+  }
+}

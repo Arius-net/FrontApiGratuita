@@ -4,13 +4,19 @@ const nextConfig: NextConfig = {
   // Habilitar modo standalone para Docker (reduce el tamaño de la imagen)
   output: "standalone",
   
+  // Variables de entorno públicas disponibles en el cliente
+  env: {
+    NEXT_PUBLIC_API_BASE_URL: process.env.NEXT_PUBLIC_API_BASE_URL || "https://act6-api-gratuita.vercel.app/api",
+  },
+  
   async headers() {
     // Obtener orígenes permitidos desde variables de entorno
-    const allowedOrigins = process.env.ALLOWED_ORIGINS || "http://localhost:3001";
+    // En producción, esto debería ser tu dominio de frontend desplegado
+    const allowedOrigins = process.env.ALLOWED_ORIGINS || "*";
     
     return [
       {
-        // Aplicar CORS a todas las rutas API
+        // Aplicar CORS a todas las rutas API (si tienes API routes en Next.js)
         source: "/api/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },

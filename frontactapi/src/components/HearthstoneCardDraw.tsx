@@ -39,7 +39,7 @@ export default function HearthstoneCardDraw() {
   const [isLoadingGallery, setIsLoadingGallery] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://act6-api-gratuita.vercel.app/api';
 
   const loadAllCards = useCallback(async () => {
     setIsLoadingGallery(true);
@@ -47,7 +47,7 @@ export default function HearthstoneCardDraw() {
 
     try {
       // Cambio: Usamos la URL dinámica de producción
-      const response = await fetch(`${API_BASE_URL}/api/hearthstone-draw/all`, {
+      const response = await fetch(`${API_BASE_URL}/hearthstone-draw/all`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -80,7 +80,7 @@ export default function HearthstoneCardDraw() {
 
     try {
       // Cambio: Usamos la URL dinámica de producción
-      const response = await fetch(`${API_BASE_URL}/api/hearthstone-draw`, {
+      const response = await fetch(`${API_BASE_URL}/hearthstone-draw`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
       });
